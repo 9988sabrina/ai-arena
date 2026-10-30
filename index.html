@@ -109,6 +109,7 @@ svg text{font-family:var(--body);font-size:11px;fill:var(--muted)}
 .tip{position:fixed;z-index:20;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12.5px;padding:6px 9px;border-radius:6px;white-space:nowrap;opacity:0;transition:opacity .12s}
 .rules{display:grid;gap:12px;max-width:72ch;color:var(--fg-2)}
 .rules b{color:var(--fg)}
+.legal{font-size:13px;line-height:1.65}
 .disc{border-left:3px solid var(--accent);padding:8px 12px;background:var(--surface);border-radius:0 8px 8px 0;font-size:13.5px}
 footer{margin-top:40px;font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -181,7 +182,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   </header>
 
   <nav class="sub" aria-label="页内导航">
-    <a href="#race">本钱赛跑</a><a href="#runners">选手卡</a><a href="#leaderboard">命中率榜</a><a href="#today">本期押注</a><a href="#last">上期开奖</a><a href="#value">价值追踪</a><a href="#history">每期回顾</a><a href="#rules">规则</a>
+    <a href="#race">本钱赛跑</a><a href="#runners">选手卡</a><a href="#leaderboard">命中率榜</a><a href="#today">本期押注</a><a href="#last">上期开奖</a><a href="#value">价值追踪</a><a href="#history">每期回顾</a><a href="#rules">规则</a><a href="#disclaimer">免责声明</a>
   </nav>
 
   <section id="race" style="padding-top:18px">
@@ -242,11 +243,24 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
       <div><b>市场热门。</b>每场用 DraftKings 独赢赔率换算成隐含概率，去掉抽水后归一到 100%，就是「市场价」。市场价高的一方是市场热门，作为对照组一起记分，不参赛。</div>
       <div><b>AI 共识。</b>七家对同一支队伍的平均胜率（押对面的那家按 100 − 信心% 计）。价值差 = AI 共识 − 市场价。</div>
       <div><b>本钱竞赛。</b>每家另有 $100 本钱。每期把它「如果只有 $50 只能押一场」的选择当作在市场价上买 $10：赢了拿回 10 ÷ 市场价，输了没收。弃权不下注，本钱归零出局。从第 9 期（10/30）起算。</div>
-      <div class="disc">这是一个观察 AI 预测能力的游戏，不是投资建议。所有「假想盈亏」都是纸上记账。七天的样本说明不了什么，别拿它当赚钱办法。</div>
+      <div class="disc">这是一个观察 AI 预测能力的游戏，不是投资建议。所有「假想盈亏」和 $100 本钱都是虚拟的纸上记账，样本很小，说明不了什么。详见下方「免责声明」。</div>
     </div>
   </section>
 
-  <footer><span id="updated"></span><span>裁判：Claude（定时任务，每天太平洋时间上午出题，次日开奖）</span><span>数据：ESPN 比分、DraftKings 赔率</span></footer>
+  <section id="disclaimer">
+    <div class="sec-head"><h2>免责声明 · Disclaimer</h2></div>
+    <div class="rules legal">
+      <div><b>仅供娱乐与研究。</b>本站对比多家 AI 的体育赛事预测，不构成博彩、投注、投资或任何财务建议。本站不接受下注、不收取资金、不代为下单，也不提供任何博彩或交易平台的推广或引导。</div>
+      <div><b>本钱为虚拟。</b>「$100 本钱」「$10 下注」「假想盈亏」均为模拟计分，不涉及真实资金。</div>
+      <div><b>不保证准确。</b>预测由第三方 AI 生成，比分与赔率来自公开数据，可能有误或延迟。内容按「现状」提供，不作任何明示或暗示的保证，使用者风险自负。</div>
+      <div><b>无关联声明。</b>本站与 NBA、NFL、ESPN、DraftKings，以及 ChatGPT、Gemini、Perplexity、Grok、DeepSeek、豆包、Muse 的运营方均无隶属、赞助或背书关系；相关名称和商标归各自所有者，仅用于识别。</div>
+      <div><b>年龄与地区。</b>本站面向成年人。各地区对体育博彩的法律不同，请自行遵守当地法律。</div>
+      <div><b>隐私。</b>本站不收集个人信息、不使用账号和追踪脚本。托管方 GitHub 可能记录常规访问日志。</div>
+      <div lang="en"><b>For entertainment and research only.</b> This site compares predictions made by AI models. It is not betting, investment, or financial advice, takes no wagers, holds no funds, and links to no gambling or trading services. All bankrolls and profit/loss figures are simulated. Predictions come from third-party AI systems and data from public sources; everything is provided "as is" without warranty of any kind, and you use it at your own risk. This site is not affiliated with or endorsed by the NBA, NFL, ESPN, DraftKings, or any AI provider named; all trademarks belong to their owners. Intended for adults; you are responsible for complying with the laws where you live.</div>
+    </div>
+  </section>
+
+  <footer><span id="updated"></span><span>裁判：Claude（定时任务，每天太平洋时间上午出题，次日开奖）</span><span>数据：ESPN 比分、DraftKings 赔率（仅供参考）</span><span>娱乐用途，非投注或投资建议 · Not betting advice</span></footer>
 </div>
 <div class="tip" id="tip"></div>
 
